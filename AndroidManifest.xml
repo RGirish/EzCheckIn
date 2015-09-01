@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ezcheckin"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/MyTheme" >
+        <activity
+            android:name="com.example.ezcheckin.Login"
+            android:label="@string/app_name" 
+			android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="MyReceiver">
+      		<intent-filter>
+         		<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+      			</action>
+      		</intent-filter>
+   		</receiver>
+		
+        <activity
+            android:name="com.example.ezcheckin.Screen1"
+			android:screenOrientation="portrait"/>
+        
+         <activity
+            android:name="com.example.ezcheckin.Screen2"
+			android:screenOrientation="portrait"
+           />
+         
+         <activity
+            android:name="com.example.ezcheckin.Screen3"
+			android:screenOrientation="portrait"
+           />
+         
+         <activity 
+    	    android:name="jim.h.common.android.zxinglib.CaptureActivity"
+			android:screenOrientation="landscape" 
+			android:configChanges="orientation|keyboardHidden"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:windowSoftInputMode="stateAlwaysHidden" />
+        
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="d2e56a208ecc3bb49afc56cd232043b8ab1976f1"/>
+    
+    </application>
+
+</manifest>

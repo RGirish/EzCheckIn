@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">EzCheckIn</string>
+    
+    <string-array name="events">
+        <item>  Mercury</item>
+        <item>  Venus</item>
+        <item>  Earth</item>
+        <item>  Mars</item>
+        <item>  Jupiter</item>
+        <item>  Saturn</item>
+        <item>  Uranus</item>
+        <item>  Neptune</item>
+    </string-array>
+    <color name="blue1">#006697</color>
+    <color name="gray1">#555555</color>
+    <color name="gray2">#cccccc</color>
+    <color name="gray3">#777777</color>
+    <color name="green">#439900</color>
+
+</resources>
